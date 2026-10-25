@@ -15,7 +15,12 @@ function showLogin() { $('appScreen').classList.add('hidden'); $('loginScreen').
 function showApp() { $('loginScreen').classList.add('hidden'); $('appScreen').classList.remove('hidden'); loadDashboard(); }
 $('loginForm').addEventListener('submit', async e => {
   e.preventDefault(); msg('loginMsg','');
-  try { const d = await api('/auth/login',{method:'POST',body:JSON.stringify({username:$('username').value,password:$('password').value})}); csrfToken=d.csrfToken; $('password').value=''; showApp(); }
+  try { 
+    const d = await api('/auth/login',{method:'POST',body:JSON.stringify({username:$('username').value,password:$('password').value})}); 
+    csrfToken = d.csrfToken || ''; 
+    $('password').value=''; 
+    showApp(); 
+  }
   catch(err) { msg('loginMsg',err.message,'error'); }
 });
 $('logoutBtn').addEventListener('click', async () => { try { await api('/auth/logout',{method:'POST',body:'{}'}); } catch(_){} showLogin(); });
@@ -88,4 +93,4 @@ async function loadAudit(){
   } catch(e) { $('auditTable').innerHTML=`<div class="alert error">${esc(e.message)}</div>`; }
 }
 $('refreshAudit').addEventListener('click',loadAudit);
-(async()=>{try{const d=await api('/api/auth/me');if(d.authenticated){csrfToken=d.csrfToken;showApp();}}catch(_){} })();
+(async()=>{try{const d=await api('/api/auth/me');if(d && d.authenticated){csrfToken=d.csrfToken || '';showApp();}}catch(_){} })();
