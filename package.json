@@ -1,0 +1,20 @@
+{
+  "name": "white-glass-api-maker",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Secure JSON-backed API key manager for authorized or synthetic records",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.0.0",
+    "dotenv": "^16.4.7"
+  }
+}
