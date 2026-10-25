@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>White Glass API Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--ink:#172033;--muted:#7b8497;--line:#e8ebf2;--accent:#5e67d8;--accent2:#8981f5;--bg:#f6f7fb;--green:#16845b;--red:#c24155;--shadow:0 18px 55px #26345b0c}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 0% 0%,#e8ebff 0,transparent 36%),radial-gradient(ellipse at 100% 5%,#e8f8f3 0,transparent 25%),var(--bg);font-family:'DM Sans',sans-serif;color:var(--ink);min-height:100vh}button,input,select{font:inherit}button{cursor:pointer;border:0}.hidden{display:none!important}.shell{max-width:1440px;margin:auto;padding:24px}.top{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:26px}.brand{display:flex;align-items:center;gap:13px}.logo{width:46px;height:46px;border-radius:16px;background:linear-gradient(145deg,#fff,#e7eaff);box-shadow:inset 0 0 0 1px #fff,0 7px 20px #5e67d822;display:grid;place-items:center;color:var(--accent);font-size:21px;font-weight:800}.brand h1{font:800 19px Manrope;margin:0;letter-spacing:-.5px}.brand p{margin:4px 0 0;color:var(--muted);font-size:12px}.topright{display:flex;align-items:center;gap:10px}.pill{border:1px solid #dfe4ef;border-radius:99px;padding:8px 12px;background:#ffffffa8;color:#5d667a;font-size:12px}.glass{background:#ffffffbd;border:1px solid #ffffffd9;box-shadow:var(--shadow);backdrop-filter:blur(18px);border-radius:22px}.login-wrap{max-width:440px;margin:9vh auto;padding:30px}.login-wrap h2{font:800 25px Manrope;margin:20px 0 8px}.sub{color:var(--muted);font-size:13px;line-height:1.6}.field{display:flex;flex-direction:column;gap:7px;margin:15px 0}.field label{font-size:12px;font-weight:700;color:#596277}.field input,.field select{width:100%;border:1px solid #e1e5ef;background:#ffffffd9;border-radius:12px;padding:12px 13px;outline:none;color:var(--ink)}.field input:focus,.field select:focus{border-color:#8c92f0;box-shadow:0 0 0 3px #777ef21b}.btn{border-radius:12px;padding:11px 15px;font-weight:700;font-size:13px;transition:.18s}.btn:hover{transform:translateY(-1px)}.primary{background:linear-gradient(135deg,var(--accent),var(--accent2));color:white;box-shadow:0 8px 18px #686ee52c}.secondary{background:#fff;border:1px solid var(--line);color:#4e5870}.danger{background:#fff1f2;color:var(--red);border:1px solid #ffe0e4}.wide{width:100%}.layout{display:grid;grid-template-columns:220px minmax(0,1fr);gap:22px}.side{padding:15px;height:max-content;position:sticky;top:18px}.nav{display:flex;align-items:center;gap:12px;width:100%;padding:12px;border-radius:12px;background:transparent;color:#707a90;text-align:left;margin:3px 0;font-size:13px;font-weight:600}.nav.active,.nav:hover{background:#eef0ff;color:var(--accent)}.nav span{width:20px;text-align:center}.side-label{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:#a0a7b7;padding:18px 12px 7px}.main{min-width:0}.welcome{display:flex;justify-content:space-between;align-items:center;gap:16px;margin:4px 0 22px}.welcome h2{font:800 25px Manrope;letter-spacing:-.8px;margin:0}.welcome p{margin:7px 0 0;color:var(--muted);font-size:13px}.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:20px}.stat{padding:18px}.stat-head{display:flex;align-items:center;justify-content:space-between;color:var(--muted);font-size:12px}.stat-icon{width:34px;height:34px;display:grid;place-items:center;border-radius:11px;background:#f0f1ff;color:var(--accent);font-size:16px}.stat strong{display:block;font:800 25px Manrope;margin-top:15px;letter-spacing:-.7px}.stat small{display:block;color:var(--muted);font-size:11px;margin-top:5px}.panel{padding:21px;margin-bottom:18px}.panel-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:17px}.panel-head h3{font:800 15px Manrope;margin:0}.panel-head p{font-size:12px;color:var(--muted);margin:5px 0 0}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}.row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.row .field{flex:1;min-width:120px;margin:0}.muted{color:var(--muted)}.tablewrap{overflow:auto}table{width:100%;border-collapse:collapse;min-width:650px}th{text-align:left;font-size:10px;letter-spacing:.8px;text-transform:uppercase;color:#9aa2b1;padding:12px;border-bottom:1px solid var(--line)}td{padding:14px 12px;border-bottom:1px solid #edf0f5;font-size:12px;vertical-align:middle}tbody tr:last-child td{border-bottom:0}.keyname{font-weight:700;font-size:13px}.mono{font-family:ui-monospace,SFMono-Regular,monospace;font-size:11px;color:#68738b}.status{display:inline-flex;border-radius:99px;padding:5px 8px;font-size:10px;font-weight:800;background:#e6f7ef;color:#16845b}.status.expired,.status.revoked,.status.limit_reached{background:#fff0f1;color:#c24155}.status.pending{background:#fff5df;color:#94651c}.empty{padding:30px;text-align:center;color:var(--muted);font-size:13px}.drop{border:1.5px dashed #cfd5e5;background:#fbfcff;border-radius:16px;padding:24px;text-align:center}.drop .big{font-size:25px;color:var(--accent)}.drop p{font-size:12px;color:var(--muted);line-height:1.6}.alert{padding:12px 14px;border-radius:12px;font-size:12px;margin:12px 0;line-height:1.55;background:#f0f3ff;color:#4e58a6}.alert.error{background:#fff0f1;color:#a52c40}.alert.success{background:#eaf8f1;color:#146c4a}.tokenbox{font-family:ui-monospace,monospace;font-size:11px;word-break:break-all;padding:12px;border-radius:10px;background:#f1f3fa;border:1px solid #e4e7f0}.tiny{font-size:11px;color:var(--muted)}.tabpage{display:none}.tabpage.active{display:block}.footer{color:#a0a7b7;text-align:center;font-size:11px;padding:20px}.fieldgrid{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}.preview{white-space:pre-wrap;overflow-wrap:anywhere;font:11px ui-monospace,monospace;background:#f8f9fc;padding:14px;border-radius:12px;max-height:250px;overflow:auto}
+@media(max-width:900px){.layout{grid-template-columns:1fr}.side{position:static;display:flex;overflow:auto;gap:4px;padding:8px}.side-label{display:none}.nav{white-space:nowrap;width:auto;flex-shrink:0}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.grid2{grid-template-columns:1fr}}
+@media(max-width:560px){.shell{padding:14px}.top{align-items:flex-start}.topright .pill{display:none}.welcome{align-items:flex-start;flex-direction:column}.welcome h2{font-size:22px}.stats{gap:9px}.stat{padding:14px}.stat strong{font-size:22px}.panel{padding:15px}.brand h1{font-size:16px}.fieldgrid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div id="loginScreen" class="shell">
+  <div class="login-wrap glass">
+    <div class="brand"><div class="logo">W</div><div><h1>WHITE GLASS</h1><p>API Studio · Secure workspace</p></div></div>
+    <h2>Welcome back.</h2><p class="sub">Sign in to manage your authorized JSON data, API keys, expiry and request quotas.</p>
+    <form id="loginForm">
+      <div class="field"><label>ADMIN USERNAME</label><input id="username" autocomplete="username" required maxlength="100" placeholder="Your admin username"></div>
+      <div class="field"><label>PASSWORD</label><input id="password" type="password" autocomplete="current-password" required maxlength="200" placeholder="Your secure password"></div>
+      <button class="btn primary wide" type="submit">Sign in securely&nbsp; ↗</button>
+    </form>
+    <div id="loginMsg"></div><p class="tiny">Protected session · Rate-limited login · No default credentials</p>
+  </div>
+</div>
+<div id="appScreen" class="shell hidden">
+  <header class="top">
+    <div class="brand"><div class="logo">W</div><div><h1>WHITE GLASS <span style="color:#747ce0">API STUDIO</span></h1><p>Authorized data · API control center</p></div></div>
+    <div class="topright"><span class="pill">◉ Secure workspace</span><button id="logoutBtn" class="btn secondary">Sign out ↗</button></div>
+  </header>
+  <div class="layout">
+    <aside class="side glass">
+      <div class="side-label">Workspace</div>
+      <button class="nav active" data-tab="overview"><span>◫</span> Overview</button>
+      <button class="nav" data-tab="database"><span>▤</span> JSON Database</button>
+      <button class="nav" data-tab="keys"><span>⌘</span> API Keys</button>
+      <button class="nav" data-tab="docs"><span>⌁</span> API Docs</button>
+      <button class="nav" data-tab="audit"><span>◷</span> Audit Log</button>
+      <div class="side-label">System</div>
+      <div style="padding:10px 12px"><div class="row"><span style="width:8px;height:8px;border-radius:50%;background:#21b47e"></span><span class="tiny">Backend connected</span></div><p class="tiny" style="line-height:1.6">JSON storage · exact match · server-enforced expiry</p></div>
+    </aside>
+    <main class="main">
+      <section id="tab-overview" class="tabpage active">
+        <div class="welcome"><div><h2>Good to see you.</h2><p>Here's what's happening with your API workspace.</p></div><button class="btn primary" data-goto="keys">＋ Create API key</button></div>
+        <div class="stats">
+          <div class="stat glass"><div class="stat-head">JSON records <span class="stat-icon">▤</span></div><strong id="statRecords">—</strong><small>Authorized imported records</small></div>
+          <div class="stat glass"><div class="stat-head">Active keys <span class="stat-icon">⌘</span></div><strong id="statKeys">—</strong><small id="statTotal">Across all key statuses</small></div>
+          <div class="stat glass"><div class="stat-head">API requests <span class="stat-icon">↗</span></div><strong id="statRequests">—</strong><small>Counted requests on keys</small></div>
+          <div class="stat glass"><div class="stat-head">Fields detected <span class="stat-icon">⌗</span></div><strong id="statFields">—</strong><small>Across imported records</small></div>
+        </div>
+        <div class="grid2">
+          <div class="panel glass"><div class="panel-head"><div><h3>Database health</h3><p>Current JSON index</p></div><span class="stat-icon">✓</span></div><div class="row" style="justify-content:space-between"><span class="muted" style="font-size:12px">Records loaded</span><strong id="healthRecords">—</strong></div><div class="row" style="justify-content:space-between;margin-top:15px"><span class="muted" style="font-size:12px">Fields detected</span><strong id="healthFields">—</strong></div><div class="alert">Import only data you are authorized to process. Public lookup responses use an explicit field allowlist.</div></div>
+          <div class="panel glass"><div class="panel-head"><div><h3>Quick start</h3><p>Get your first endpoint running</p></div></div><button class="btn secondary wide" data-goto="database">01 · Import JSON database</button><button class="btn secondary wide" style="margin-top:9px" data-goto="keys">02 · Create an API key</button><button class="btn secondary wide" style="margin-top:9px" data-goto="docs">03 · Test the API endpoint</button></div>
+        </div>
+        <div class="panel glass"><div class="panel-head"><div><h3>Recent API keys</h3><p>Manage expiry, usage and access</p></div><button class="btn secondary" data-goto="keys">View all</button></div><div id="recentKeys"></div></div>
+      </section>
+      <section id="tab-database" class="tabpage">
+        <div class="welcome"><div><h2>JSON Database</h2><p>Import a JSON array and automatically detect record fields.</p></div></div>
+        <div class="grid2">
+          <div class="panel glass"><div class="panel-head"><div><h3>Import JSON file</h3><p>Maximum upload 100 MB · 1,000,000 records</p></div></div>
+            <div class="drop"><div class="big">⇧</div><strong>Choose a JSON file</strong><p>Select any number of JSON files (combined import limit: 100 MB). Each file should contain an array of flat objects or { "records": [...] }. Import replaces the current indexed dataset.</p><input id="jsonFile" type="file" accept=".json,application/json" multiple style="max-width:100%;font-size:12px;margin:10px auto"><button id="importBtn" class="btn primary wide">Validate & import</button></div><div id="importMsg"></div>
+          </div>
+          <div class="panel glass"><div class="panel-head"><div><h3>Detected schema</h3><p>Field names discovered in the current dataset</p></div></div><div id="fieldList" class="row"><span class="muted tiny">Import JSON to detect fields.</span></div><div class="alert">For safety, the preview redacts field names containing email, phone, mobile or address. The API returns only the fields configured on your server.</div></div>
+        </div>
+        <div class="panel glass"><div class="panel-head"><div><h3>Indexed JSON files</h3><p>File-by-file record and field analysis</p></div></div><div id="sourcesTable"><div class="empty">Import JSON files to see analysis.</div></div></div>
+        <div class="panel glass"><div class="panel-head"><div><h3>Sample record preview</h3><p>Sensitive values are redacted automatically</p></div><button id="refreshPreview" class="btn secondary">Refresh preview</button></div><pre id="recordPreview" class="preview">No preview loaded.</pre></div>
+      </section>
+      <section id="tab-keys" class="tabpage">
+        <div class="welcome"><div><h2>API Key Manager</h2><p>Create named keys with server-enforced expiry and request quotas.</p></div></div>
+        <div class="panel glass"><div class="panel-head"><div><h3>Create a new API key</h3><p>The secret is shown only once after creation.</p></div><span class="stat-icon">＋</span></div>
+          <form id="createKeyForm"><div class="fieldgrid">
+            <div class="field"><label>CUSTOM KEY NAME</label><input id="keyName" required maxlength="80" placeholder="e.g. Demo Client A"></div>
+            <div class="field"><label>EXPIRY (DAYS)</label><input id="keyDays" type="number" required min="1" max="3650" value="30"></div>
+            <div class="field"><label>MAX REQUESTS</label><input id="keyLimit" type="number" required min="1" max="10000000" value="1000"></div>
+          </div><button class="btn primary" type="submit">Generate secure API key ↗</button></form><div id="newKeyResult"></div>
+        </div>
+        <div class="panel glass"><div class="panel-head"><div><h3>All API keys</h3><p>Expiry and quotas are checked on every request.</p></div><button id="refreshKeys" class="btn secondary">↻ Refresh</button></div><div id="keysTable"></div></div>
+      </section>
+      <section id="tab-docs" class="tabpage">
+        <div class="welcome"><div><h2>API Documentation</h2><p>Use a generated API key to query your authorized demo database.</p></div></div>
+        <div class="panel glass"><div class="panel-head"><div><h3>Exact-match endpoint</h3><p>Only configured response fields are returned.</p></div><span class="status">GET</span></div>
+          <div class="tokenbox">GET /v1/lookup?q=DEMO-1001<br>X-API-Key: wg_your_generated_key</div>
+          <div class="field"><label>EXACT LOOKUP VALUE</label><input id="testQuery" placeholder="Enter a synthetic test identifier"></div>
+          <div class="field"><label>API KEY</label><input id="testToken" placeholder="Paste the key shown after creation"></div>
+          <button id="testApiBtn" class="btn primary">Send test request ↗</button><div id="apiTestMsg"></div><pre id="apiTestResult" class="preview">Response will appear here.</pre>
+          <div class="alert">Default configuration searches exact values in the MOBILE field and returns MOBILE only. To change fields, set LOOKUP_FIELD and RESPONSE_FIELDS as Render environment variables, and redeploy. Avoid exposing personal or sensitive data through public endpoints.</div>
+        </div>
+        <div class="panel glass"><div class="panel-head"><div><h3>Response behavior</h3></div></div>
+          <p class="sub"><b>200</b> exact match found · <b>400</b> missing query · <b>401</b> missing/invalid/expired key · <b>404</b> record not found · <b>429</b> quota reached or rate limit exceeded.</p>
+          <p class="sub">Not found responses include the configured fallback labels: @CoderArjun, @Tg_ownner and @ZAD_OSINT_EXPLOIT_OWNER. Labels are informational and do not identify a data owner.</p>
+        </div>
+      </section>
+      <section id="tab-audit" class="tabpage">
+        <div class="welcome"><div><h2>Audit Log</h2><p>Recent authentication, import and key-management events.</p></div><button id="refreshAudit" class="btn secondary">↻ Refresh</button></div>
+        <div class="panel glass"><div id="auditTable"></div></div>
+      </section>
+    </main>
+  </div>
+  <div class="footer">WHITE GLASS API STUDIO · Built for authorized and synthetic data</div>
+</div>
+<script src="/app.js" defer></script>
+</body></html>
